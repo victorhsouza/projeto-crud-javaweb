@@ -1,0 +1,51 @@
+<div th:replace="shared/header" xmlns:th="http://www.w3.org/1999/xhtml"></div>
+                <!-- Begin Page Content -->
+                <div class="container-fluid" >
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                        For more information about DataTables, please visit the <a target="_blank"
+                            href="https://datatables.net">official DataTables documentation</a>.</p>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nome</th>
+                                            <th>CPF</th>
+                                            <th>Email</th>
+                                            <th>Endereço</th>
+                                            <td>.</td>
+                                            <td>.</td>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr th:each="user:${users}" xmlns:th="http://www.w3.org/1999/xhtml">
+                                            <td th:text="${user.id}"></td>
+                                            <td th:text="${user.name}"></td>
+                                            <td th:text="${user.cpf}"></td>
+                                            <td th:text="${user.email}"></td>
+                                            <td th:text="${user.address}"></td>
+                                            <td> <button  class="btn btn-warning"> Alterar</button> </td>
+                                            <td> <button class="btn btn-danger">Excluir</button> </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+                </div>
+               <!-- End of Main Content -->
+<div th:replace="shared/footer" xmlns:th="http://www.w3.org/1999/xhtml"></div>
