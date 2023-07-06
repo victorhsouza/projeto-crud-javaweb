@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoginService {
 
-    @Autowired
+    @Autowired(required = true)
     private UserRepositorie userRepositorie;
 
 
