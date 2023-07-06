@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import java.util.zip.DataFormatException;
 
-@SpringBootApplication(scanBasePackages = "com.senai.quartaaplicacaoweb")
+@SpringBootApplication
 public class QuartaaplicacaowebApplication {
 
 	public static void main(String[] args) {
