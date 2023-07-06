@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.zip.DataFormatException;
 
-@SpringBootApplication
+
 @Configuration
-@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class QuartaaplicacaowebApplication {
 
 	public static void main(String[] args) {
