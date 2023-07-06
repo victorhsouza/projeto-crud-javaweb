@@ -11,6 +11,10 @@ public class LoginService {
     @Autowired
     private UserRepositorie userRepositorie;
 
+    public LoginService(UserRepositorie userRepositorie) {
+        this.userRepositorie = userRepositorie;
+    }
+
     public UserModel logar(UserModel userModel){
         return userRepositorie.login(userModel.getEmail(), userModel.getPassword());
     }
